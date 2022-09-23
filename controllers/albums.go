@@ -9,6 +9,14 @@ import (
 	"time"
 )
 
+func Welcome(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"status":  200,
+		"message": "Welcome to Go Rest Api",
+	})
+	return
+}
+
 type album struct {
 	ID        string    `json:"id"`
 	Title     string    `json:"title"`
